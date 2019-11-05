@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<video controls="controls"  preload="auto"  height="300" width="400" id="videoPath"    type="video/mp4">
+    您的浏览器不支持html5!
+</video>
+</body>
+<script src="/js/jquery.min.js"></script>
+<script>
+    $(function () {
+        var xhr = new XMLHttpRequest();//创建XMLHttpRequest对象
+        xhr.open('GET', 'http://localhost:8080/getVideoSrc', true);//配置请求方式、请求地址以及是否同步
+        xhr.responseType = 'blob';//设置结果类型为blob;
+        xhr.onload = function(e) {
+            alert(this.status);
+            if (this.status === 200) {
+                // 获取blob对象
+                var blob = this.response;
+                console.log(blob);
+                // 获取blob对象地址，并把值赋给容器
+                $("#videoPath").attr("src", URL.createObjectURL(blob));
+            }
+        };
+        xhr.send();
+    });
+</script>
+</html>

@@ -1,0 +1,51 @@
+1.下载tomcat
+wget https://mirrors.tuna.tsinghua.edu.cn/apache/tomcat/tomcat-8/v8.5.47/bin/apache-tomcat-8.5.47.tar.gz
+2.解压tomcat
+tar -zxvf apache-tomcat-8.5.47.tar.gz
+3.安装jdk
+yum install -y java-1.8.0-openjdk-devel.x86_64
+4.查看jdk版本
+java -version
+5.进入bin目录启动tomcat
+cd apache-tomcat-8.5.47
+cd bin
+./startup.sh
+6.关闭防火墙
+systemctl stop firewalld.service
+7.访问8080端口
+http://140.82.61.117:8080/
+8.安装lrzsz来传输文件
+yum -y install lrzsz
+9.检查是否安装成功
+rpm -qa lrzsz
+10.传输文件
+rz -y
+11
+springboot项目打包成jar
+下载rar
+wget https://www.rarlab.com/rar/rarlinux-x64-5.6.0.tar.gz
+解压
+tar -xzvf rarlinux-x64-5.6.0.tar.gz
+进入解压目录安装rar
+make install
+12.linux中的解压和压缩
+解压：rar x FileName.rar 
+压缩：rar a FileName.rar DirName 
+13
+删除文件夹实例：
+rm -rf /var/log/httpd/access
+二、部署到linux
+
+<1>首次部署当前程序需要在对应的文件夹中执行以下命令
+
+a.启动程序 nohup java -jar demo01.jar &
+b.退出 ctrl + c
+c.查看日志 tail -500f nohup.out
+
+<2>非首次部署当前程序需要在对应的文件夹中执行以下命令
+
+a.捕获上一个版本程序的进程 ps - ef|grep demo01.jar
+b.杀死对应的进程 kill 进程号
+c.启动程序 nohup java -jar demo01.jar &
+d.退出 ctrl + c
+e.查看日志 tail -500f nohup.out
