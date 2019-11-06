@@ -13,7 +13,7 @@
 <script>
     $(function () {
         var xhr = new XMLHttpRequest();//创建XMLHttpRequest对象
-        xhr.open('GET', 'http://localhost:8080/getVideoSrc', true);//配置请求方式、请求地址以及是否同步
+        xhr.open('GET', 'http://localhost:8080/getVideoBlob_V2', true);//配置请求方式、请求地址以及是否同步
         xhr.responseType = 'blob';//设置结果类型为blob;
         xhr.onload = function(e) {
             alert(this.status);

@@ -21,7 +21,7 @@ public class VideoController {
     public OutputStream getVideoSrc(HttpServletRequest httpServletRequest,
                                     HttpServletResponse httpServletResponse){
         //1.创建文件对象
-        File f = new File("E:/video/src/main/resources/videoes/1.mp4");
+        File f = new File("http://q0itt231t.bkt.clouddn.com/1.mp4");
         //2.获取文件名称
         String fileName = f.getName();
         //3.导出文件
@@ -75,7 +75,7 @@ public class VideoController {
     public OutputStream getVideoBlob_V2(HttpServletRequest httpServletRequest,
                                         HttpServletResponse httpServletResponse) {
 
-        String httpUrl = "https://wangfang.oss-cn-qingdao.aliyuncs.com/wf_video/videoPath/863E1B126B81B7B60993CC0B9B1EC1EA.mp3";
+        String httpUrl = "http://q0itt231t.bkt.clouddn.com/1.mp4";
         // 1.下载网络文件
         URL url = null;
         try {
@@ -119,4 +119,5 @@ public class VideoController {
 
         return outputStream;
     }
+
 }
