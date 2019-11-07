@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="connection.url">jdbc:mysql://localhost/student?serverTimezone=GMT%2B8</property>
+    <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+      <mapping class="cn.com.scitc.demo7.model.User"/>
+      <mapping resource="cn/com/scitc/demo7/model/Proorder.hbm.xml"/>
+      <mapping class="cn.com.scitc.demo7.model.Proorder"/>
+      <mapping resource="cn/com/scitc/demo7/model/User.hbm.xml"/>
+      <!-- <property name="connection.username"/> -->
+    <!-- <property name="connection.password"/> -->
+
+    <!-- DB schema will be updated if needed -->
+    <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
+  </session-factory>
+</hibernate-configuration>
