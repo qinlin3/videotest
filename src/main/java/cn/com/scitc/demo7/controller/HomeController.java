@@ -20,6 +20,11 @@ public class HomeController {
         return "home";
     }
 
+    @RequestMapping(value = "/vod-detail-id-7478")
+    public String id7478(){
+        return "vod-detail-id-7478.html";
+    }
+
 
     /*@ResponseBody
     @RequestMapping(value = "/getVideoSrc")
