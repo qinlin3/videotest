@@ -3,5 +3,8 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources/javaweb笔记.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/static/hui/css/common.css" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/static/hui/js/lrtk.js" charset="GBK" />
+    <file url="PROJECT" charset="GBK" />
   </component>
 </project>

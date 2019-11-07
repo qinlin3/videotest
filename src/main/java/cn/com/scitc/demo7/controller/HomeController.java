@@ -15,6 +15,10 @@ public class HomeController {
     public String video(){
         return "video";
     }
+    @RequestMapping(value = "/home")
+    public String home(){
+        return "home";
+    }
 
 
     /*@ResponseBody
